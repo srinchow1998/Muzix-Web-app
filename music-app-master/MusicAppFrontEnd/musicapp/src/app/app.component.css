@@ -1,0 +1,30 @@
+#page-container{
+    position: relative;
+    min-height: 100vh;
+    background-color:black;
+
+}
+
+.content-wrap{
+    padding-bottom: 2rem;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 0rem;
+}
+
+
+.content-wrap{
+    padding-bottom: 2rem;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+}

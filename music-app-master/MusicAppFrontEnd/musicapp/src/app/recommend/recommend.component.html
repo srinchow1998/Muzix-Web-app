@@ -1,0 +1,23 @@
+<body>
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-4 " *ngFor="let s of recs">
+                <div class="card">
+
+                    <img src="{{s['coverPic']}}"
+                        class="card-img-top" alt="{{s['artistName']}}">
+                    <div class="card-body">
+                        <p>Artist Name : {{s['artistName']}}</p>
+                        <p>Track Name : {{s['title']}}</p>
+
+                    </div>
+                    <audio controls class="audio">
+                        <source src="{{s['audio']}}" type="audio/mpeg">
+                    </audio>       
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

@@ -1,0 +1,57 @@
+version: '3'
+services:
+  authenticationapiservice:
+    image: musicauthimage
+    build: MusicAppApi/AuthenticationApi
+    ports:
+      - "9090:80"
+    depends_on:
+      - authenticationdb
+    environment:
+      SQL_CONNECTION: "server=authenticationdb;database=AuthenticationDb;User Id=sa;password=pass@123;"
+ 
+  favoriteapiservice:
+    image: musicfavoriteimage
+    build: MusicAppApi/FavroriteService
+    ports:
+      - "9091:80"
+    depends_on:
+      - FavoriteDb
+    environment:
+      MONGO_CONNECTION: "mongodb://FavoriteDb:27017"
+
+  recommendapiservice:
+    image: musicrecommendimage
+    build: MusicAppApi/RecommendationService
+    ports:
+      - "9092:80"
+
+  dashboardapiservice:
+    image: musicdashboardimage
+    build: MusicAppApi/DashboardService
+    ports:
+      - "9093:80" 
+
+  angularapp:
+    image: angularappimage
+    build: MusicAppFrontEnd/musicapp  
+    ports: 
+      - "4200:4200"
+    depends_on: 
+      - authenticationapiservice
+      - favoriteapiservice
+      - recommendapiservice
+      - dashboardapiservice
+
+  authenticationdb:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "pass@123"
+      ACCEPT_EULA: "Y"
+
+  FavoriteDb:
+    image: mongo
+    ports: 
+      - "27017:27017"

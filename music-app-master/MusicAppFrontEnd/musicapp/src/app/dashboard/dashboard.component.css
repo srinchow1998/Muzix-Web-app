@@ -1,0 +1,23 @@
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 15px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  
+  .navbar-nav li a:hover {
+    color: rgb(252, 21, 21) !important;
+  }
+
+  .navbar .navbar-toggler {
+    border-color: transparent;
+  }
+  .navbar-nav li.active a {
+    color: rgb(235, 18, 18) !important;
+    background-color:#29292c !important;
+  }
+#title{
+  font-family:cursive;
+}

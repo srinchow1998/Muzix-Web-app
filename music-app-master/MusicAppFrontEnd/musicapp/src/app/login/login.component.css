@@ -1,0 +1,21 @@
+#myid
+{
+    color: red;
+    font-size: 20px;
+    font-style: normal;
+    margin-left: 0;
+}
+.container{
+    width: 450px;
+    margin-left: center;
+    height: 100vh;
+}
+ body{
+    background: url("/assets/Images/sample2.jpg") no-repeat ; 
+    background-size: 100%;
+    background-size: cover;
+}
+h1,label{
+    color: white;
+}
+

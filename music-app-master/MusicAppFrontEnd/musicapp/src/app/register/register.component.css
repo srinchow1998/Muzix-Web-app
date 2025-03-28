@@ -1,0 +1,13 @@
+/* .container{
+    width: 450px;
+    margin-left: 100px;
+    padding-top: 50px;
+} */
+body{
+    background: url("/assets/Images/sample4.jpg") no-repeat; 
+    background-size: 100%;
+    background-size: cover;
+}
+h1,label{
+    color: white;
+}
